@@ -1,0 +1,28 @@
+---
+title: "cap 3 problema 13"
+author: "LUIS ENRIQUE OSSA UREÑA"
+date: "02/17/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## resolucion de problema cap 3 proeblema 13 
+
+ Con respecto al problema anterior:a) Conteste los tres incisos del problema anterior sin tomar en cuenta el efecto de laslavadoras y obtenga conclusiones.b) ¿Hay diferencias en las conclusiones anteriores y las del pro blema anterior? Explique su respuesta.c) ¿Con cuáles conclusiones se queda? Explique su respuesta.
+
+## entrada de los datos 
+
+```{r}
+df=data.frame(A=A,B=B,C=C,D=D,E=E,D=D)
+df=stack(df)
+
+names(df)=c("Y","Trat")
+df
+```
+
+
+
+

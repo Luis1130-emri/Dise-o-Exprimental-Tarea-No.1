@@ -1,0 +1,30 @@
+M= c(75,77,78,79,77,73,78,79,78,80)
+H= c(74,72,77,76,76,73,75,73,74,75)
+df=data.frame(M=M,H=H)
+df=stack(df)
+
+names(df)=c("Y","Trat")
+df
+
+boxplot(Y~Trat,data=df)
+
+modelo=aov(Y~Trat,data=df)
+summary(modelo)
+
+tk=TukeyHSD(modelo)
+tk
+plot(tk)
+
+1-pf(12.43,1,18)
+
+qqnorm(modelo$residuals)
+qqline(modelo$residuals)
+
+shapiro.test(modelo$residuals)
+
+library("car")
+leveneTest(Y~Trat,data=df)
+
+plot(modelo$residuals)
+plot(modelo$fitted.values,modelo$residuals)
+
